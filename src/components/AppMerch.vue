@@ -58,7 +58,9 @@
 
 </template>
 
-<style>
+<style lang="scss">
+
+@use '../../src/style/variables' as *;
 
 .merch{
 
@@ -68,13 +70,14 @@ align-items: center;
 
 width: 100%;
 
-background-color: #0c7cec;
+background-color: $primarycolor;
 
 padding: 50px 0;
 
 .list{
 
     width: 80%;
+
 
     ul{
 
@@ -88,6 +91,7 @@ padding: 50px 0;
 
             display: flex;
             align-items: center;
+            flex-wrap: wrap;
 
             gap: 15px;
 

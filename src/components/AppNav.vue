@@ -6,7 +6,7 @@
         
         data() {
             return {
-                links:[
+                navLinks:[
 
                     'CAHARACTERS',
                     'COMICS',
@@ -35,11 +35,11 @@
 
         <div class="nav-container">
             <div class="logo">
-                <img src="../assets/dc-logo.png" alt="#">
+                <img src="../../public/dc-logo.png" alt="#">
             </div>
             <div class="list">
                 <ul>
-                    <li v-for="currentLink in links">{{currentLink}}</li>
+                    <li v-for="currentLink in navLinks">{{currentLink}}</li>
                 </ul>
             </div>
         </div>
@@ -71,6 +71,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        flex-wrap: wrap;
 
         width: 80%;
 
@@ -94,6 +95,7 @@
             
             ul{
                 display: flex;
+                flex-wrap: wrap;
                 gap: 35px;
             
                 list-style-type: none;
