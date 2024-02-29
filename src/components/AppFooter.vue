@@ -9,11 +9,64 @@
 </script>
 
 <template>
-
-    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis at sapiente magnam sit quo aliquid possimus ducimus consequatur aspernatur totam assumenda suscipit adipisci, voluptatum odit cum voluptatem! Maxime, similique accusantium!</p>
+<div class="footer">
+    <div class="jumbo">
+        <div class="list">
+            <div>
+                <div>
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+                <div>
+                    <ul>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+            </div>
+            <div>
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+            <div>
+    
+            </div>
+        </div>
+    </div>
+</div>
 
 </template>
 
 <style>
+
+.footer{
+
+    .jumbo{
+        
+        background-image: url(../assets/dc-logo-bg.png);
+    
+    
+    }
+
+}
+
 
 </style>

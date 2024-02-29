@@ -3,8 +3,29 @@
     export default {
 
         name: 'AppNav',
+        
+        data() {
+            return {
+                links:[
 
+                    'CAHARACTERS',
+                    'COMICS',
+                    'MOVIE',
+                    'TV',
+                    'GAMES',
+                    'COLLECTIBLES',
+                    'VIDEO',
+                    'FANS',
+                    'NEWS',
+                    'SHOP',
+
+                ]
+                    
+                
+            }
+        }
     }
+
 
 </script>
 
@@ -18,16 +39,7 @@
             </div>
             <div class="list">
                 <ul>
-                    <li>CHARACTERS</li>
-                    <li>COMICS</li>
-                    <li>MOVIE</li>
-                    <li>TV</li>
-                    <li>GAMES</li>
-                    <li>COLLECTIBLES</li>
-                    <li>VIDEO</li>
-                    <li>FANS</li>
-                    <li>NEWS</li>
-                    <li>SHOP</li>
+                    <li v-for="currentLink in links">{{currentLink}}</li>
                 </ul>
             </div>
         </div>
@@ -36,7 +48,11 @@
 
 </template>
 
-<style>
+<style lang="scss">
+
+@use '../../src/style/variables' as *;
+
+
 
 .nav{
 
@@ -50,50 +66,50 @@
 
     padding: 20px 0;
 
-.nav-container{
+    .nav-container{
 
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
 
-    width: 100%;
+        width: 80%;
 
-    .logo{
+        .logo{
 
-        height: 80px;
-        width: 80px;
+            height: 80px;
+            width: 80px;
 
-        img{
+            img{
 
-            height: 100%;
-            width: 100%;
-
-        }
-
-    }
-
-    .list{
-
-        height: 100%;
-        
-        ul{
-            display: flex;
-            gap: 35px;
-        
-            list-style-type: none;
-
-            color: black;
-
-            li{
-
-                border-bottom: 5px solid #0c7cec;
+                height: 100%;
+                width: 100%;
 
             }
+
+        }
+
+        .list{
+
+            height: 100%;
+            
+            ul{
+                display: flex;
+                gap: 35px;
+            
+                list-style-type: none;
+
+                color: black;
+
+                li{
+
+                    border-bottom: 5px solid $primarycolor;
+
+                }
+            }
+
         }
 
     }
-
-}
 
 }
 
