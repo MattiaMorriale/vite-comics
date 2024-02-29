@@ -2,7 +2,7 @@
 
     export default {
 
-        name: 'AppBody',
+        name: 'AppMain',
 
     }
 
@@ -10,7 +10,9 @@
 
 <template>
 
-    <h1>Ciao Mondo</h1>
+    <div class="main">
+
+    </div>
 
 </template>
 

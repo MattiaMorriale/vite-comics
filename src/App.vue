@@ -2,7 +2,7 @@
 
   import AppNav from './components/AppNav.vue';
 
-  import AppBody from './components/AppBody.vue';
+  import AppMain from './components/AppMain.vue';
 
   import AppFooter from './components/AppFooter.vue';
 
@@ -10,11 +10,13 @@
 
 <template>
 
+<div class="container">
   <AppNav></AppNav>
 
-  <AppBody></AppBody>
+  <AppMain></AppMain>
 
   <AppFooter></AppFooter>
+</div>
 
 </template>
 
