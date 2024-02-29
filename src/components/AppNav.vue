@@ -6,6 +6,7 @@
         
         data() {
             return {
+
                 navLinks:[
 
                     'CAHARACTERS',
@@ -19,9 +20,10 @@
                     'NEWS',
                     'SHOP',
 
-                ]
+                ],
+
+                activeLinks: 1,
                     
-                
             }
         }
     }
@@ -39,7 +41,7 @@
             </div>
             <div class="list">
                 <ul>
-                    <li v-for="currentLink in navLinks">{{currentLink}}</li>
+                    <li v-for="(currentLink, index) in navLinks" :class="index == activeLinks ? 'active' : '' ">{{currentLink}}</li>
                 </ul>
             </div>
         </div>
@@ -64,8 +66,6 @@
 
     width: 100%;
 
-    padding: 20px 0;
-
     .nav-container{
 
         display: flex;
@@ -79,6 +79,8 @@
 
             height: 80px;
             width: 80px;
+
+            margin: 20px 0;
 
             img{
 
@@ -94,6 +96,7 @@
             height: 100%;
             
             ul{
+
                 display: flex;
                 flex-wrap: wrap;
                 gap: 35px;
@@ -103,10 +106,25 @@
                 color: black;
 
                 li{
+                    padding: 46px 0;
 
-                    border-bottom: 5px solid $primarycolor;
+                    font-weight: bold;
+
+                    user-select: none;
+                    cursor: pointer;
+
+                    &.active{
+
+                        color: $primarycolor;
+
+                        border-bottom: 5px solid $primarycolor;
+
+                    }
+
+
 
                 }
+
             }
 
         }

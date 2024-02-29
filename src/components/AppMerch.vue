@@ -89,6 +89,9 @@ padding: 50px 0;
 
         li{
 
+            user-select: none;
+            cursor: pointer;
+
             display: flex;
             align-items: center;
             flex-wrap: wrap;

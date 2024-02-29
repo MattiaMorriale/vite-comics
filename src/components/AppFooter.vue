@@ -110,7 +110,7 @@
                     {
                         imgSocial: '../../public/footer-periscope.png'
                     },
-                ]
+                ],
 
             }
         }
@@ -239,6 +239,9 @@
                 li{
                     cursor: pointer;
 
+                    user-select: none;
+
+
                     color: #999;
                 }
             }
@@ -265,6 +268,9 @@
             justify-content: center;
             align-items: center;
 
+            user-select: none;
+            cursor: pointer;
+
             border: 5px solid $primarycolor;
             
             padding: 20px 25px;
@@ -284,6 +290,8 @@
                 list-style-type: none;
 
                 li{
+                    
+                    user-select: none;
 
                     display: flex;
                     justify-content: center;

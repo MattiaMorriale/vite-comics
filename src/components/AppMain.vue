@@ -55,6 +55,9 @@
                 color: white;
                 text-decoration: none;
 
+                user-select: none;
+                cursor: pointer;
+
                 font-size: 30px;
 
             }
