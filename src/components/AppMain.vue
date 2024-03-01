@@ -102,6 +102,8 @@
 <template>
 
     <div class="main">
+        <div class="jumbo">
+        </div>
         <div class="main-content">
             <div class="link">
                 <AppComics 
@@ -109,16 +111,28 @@
                 :comicsThumb="currentComics.thumb"
                 :comicsSeries="currentComics.series">
                 </AppComics>
+
+                <div class="btn-abs">
+                    <a href="#">
+                        <strong>CURRENT SERIES</strong>
+                    </a>
+                </div>
             </div>
+            <div class="btn">
+                <a href="#">
+                    <strong>LOAD MORE</strong>
+                </a>
+            </div>
+            
         </div>
         <AppMerch></AppMerch>
-        
-
     </div>
 
 </template>
 
-<style>
+<style lang="scss">
+
+@use '../../src/style/variables' as *;
 
 .main{
 
@@ -126,40 +140,73 @@
     align-items: center;
     flex-direction: column;
 
+    .jumbo{
+        background-image: url(../../public/jumbotron.jpg);
+        background-size: cover;
+        height: 400px;
+        width: 100%;
+    }
+
     .main-content{
 
         display: flex;
         justify-content: center;
         align-items: center;
+        flex-direction: column;
 
         width: 100%;
 
         background-color: #1c1c1c;
 
+    
+
         .link{
 
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-between;
+            justify-content: space-around;
 
-            gap: 20px;
+            position: relative;
+
+            gap: 10px;
 
             width: 80%;
 
-            padding: 50px 0;
+            padding: 50px 0 25px 0;
 
-            a{
+            .btn-abs{
+                background-color: $primarycolor;
 
-                color: white;
-                text-decoration: none;
+                padding: 15px 60px;
 
-                user-select: none;
+                position: absolute;
+
                 cursor: pointer;
 
-                font-size: 30px;
+                left: 0;
+                top: -28px;
 
+                a{
+                    color: white;
+                    text-decoration: none;
+                }
+            }   
+
+        }
+
+        .btn{
+            background-color: $primarycolor;
+
+            padding: 15px 60px;
+
+            margin-bottom: 20px;
+
+            cursor: pointer;
+
+            a{
+                color: white;
+                text-decoration: none;
             }
-
         }
 
     }
